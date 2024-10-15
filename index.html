@@ -1,0 +1,220 @@
+<!-- head -->
+<head>
+	<title>Q1 Quiz1: Super Mario Movie</title>
+	<!-- styling -->
+	<style>
+		body
+		{
+			background-color:seagreen;
+			
+			color: #F5F5F5;
+		}
+
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.Footer{
+			bottom: 0;
+			position: fixed;
+			background-color: blueviolet;
+			width: 2002;
+		}
+
+		.CharImg
+		{
+			width: 50px;
+			height: 100px;
+		}
+
+		.CharImg2{
+			width: 120px;
+			height: 100px;
+		}
+		.EnableUl{
+			list-style: none;
+			
+		.Links{
+			color:darkred;
+			font-weight: bold;
+		}
+		}
+		.Enableli{
+			display: inline;
+			padding: 35px;
+		}
+		.CharContainer{
+			text-align: center; /* Centers the image and link */
+            margin: 10px; /* Adds space around the container */
+		}
+
+		ol.li{
+			text-align: left-margin;
+
+		}
+
+		a {
+			color: yellow;
+			font-weight: bold;
+		}
+
+		.centerli{
+			text-align: center;
+			list-style-position:inside ;
+		}
+
+		.Container{
+			padding: 2px 16px;
+			
+		}
+
+		.CharCard{
+			display: inline-flex;
+			text-wrap: wrap;
+			border-style: solid;
+			border-color: skyblue;
+			background-image: url(data:image/jpeg;base64,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);
+		}
+
+		.InsertBackgroundImage{
+			
+			background-image: url(https://images.alphacoders.com/129/thumb-1920-1292641.jpg);
+			background-repeat: no-repeat;
+		}
+		
+		.Description
+		{
+			background-color: skyblue;
+			color: darkblue;
+		}
+
+		form{
+		    text-align:center; 
+			
+			color: whitesmoke;
+
+		}
+
+		.web_form{
+			margin-left:20% ;
+			margin-right:20% ;
+		}
+	</style>
+</head>
+<!-- Body -->
+<body >
+	<center style="text-align: center;">
+		<h1 style="border-style: solid; background-color: darkred; color:#FFC700;" class="EnableUl">The Super Mario Bros. Movie</h1>
+		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDWEDfnQ4SNQeOdlyrH2gjsojf661UB3s2TA&s" class="Poster">
+		<div class="Description">
+		<p><h4>This animated movie is inspired by the Mario series. It brings the iconic characters and adventures from the video games to life on the big screen.</h4> </p>
+		<p><h4>Fans of the series will recognize familiar elements and enjoy a fresh take on the beloved franchise.</h4></p>
+		<br>
+		<p><h4>The Super Mario Bros. Movie premiered at Regal LA Live in Los Angeles on April 1, 2023, and was released in the United States on April 5. Although it received mixed reviews from critics, the film grossed $1.36 billion worldwide and broke multiple box-office records, including the biggest worldwide opening weekend for an animated film, the highest grossing film based on a video game, and the first film based on a video game to gross over $1 billion. </h4></p>
+		<hr>
+		
+		</div>
+		<h2 style="color:white;">Main Characters:</h2>
+		<br>
+	<div class="Characters">
+		
+		 <!-- <img src="https://static.wikia.nocookie.net/pure-good-wiki/images/2/26/MarioIllumination.webp/revision/latest?cb=20230425025104" class="CharImg" alt="Mario_img" align="margin-left">  
+		 <a href="https://pure-good-heroes.fandom.com/wiki/Mario_(The_Super_Mario_Bros._Movie)" align="margin-bottom" target="_blank"> Mario (Chris Pratt) </a> -->
+
+		 <div id="Mario" class="CharCard">
+		 	<img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/bae58b19-3adb-45a5-a03c-2a2830f73337/dfou0yz-13aab2ca-2d7a-457e-b235-fa3564712392.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2JhZTU4YjE5LTNhZGItNDVhNS1hMDNjLTJhMjgzMGY3MzMzN1wvZGZvdTB5ei0xM2FhYjJjYS0yZDdhLTQ1N2UtYjIzNS1mYTM1NjQ3MTIzOTIucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.0TJKNK6xOoIwWw3rtZumGzzh4wAWbWPvbUVJrk4jRTQ" class="CharImg" alt="Mario_img" align="margin-left">  
+		 	<div class="Container">
+		 		<h2 style="border-style: dotted; border-radius: 5px; border-color: whitesmoke; color: red; background-color:white;">Mario</h2>
+
+
+		 	</div>
+		 </div>
+		 
+		 
+
+		 <!-- <li class="Enableli" class="CharContainer">
+		 <img src="https://static.wikia.nocookie.net/mario/images/b/b6/Luigi_the_super_mario_bros_movie_full_render.png/revision/latest?cb=20230305024303" class="CharImg" alt="Luigi_img" align="margin-left">  
+		 <a href="https://mario.fandom.com/wiki/Luigi_(The_Super_Mario_Bros._Movie)" target="_blank" class="Links"> Luigi (Charlie Day) </a>
+		</li> -->
+
+		<div id="Luigi" class="CharCard">
+		 	<img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/20ee8a80-217c-4171-8f05-38529f52ac76/dfupall-34455878-8ff8-4a51-b116-c7478f52dffe.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzIwZWU4YTgwLTIxN2MtNDE3MS04ZjA1LTM4NTI5ZjUyYWM3NlwvZGZ1cGFsbC0zNDQ1NTg3OC04ZmY4LTRhNTEtYjExNi1jNzQ3OGY1MmRmZmUucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.LKmVJY8v9dpJ80ndWyHXreYlHuOtAundRbhLx75JGog" class="CharImg" alt="Luigi_img" align="margin-left">  
+		 	<div class="Container">
+		 		<h2 style="border-style: dotted; border-radius: 5px; border-color: whitesmoke; color: green; background-color:white;">Luigi</h2>
+		 	</div>
+		 </div>
+
+		
+
+		<!-- <li class="Enableli" class="CharContainer">
+		 <img src="https://static.wikia.nocookie.net/p__/images/d/d0/TSMBM_Peach.png/revision/latest?cb=20230410191758&path-prefix=protagonist" class="CharImg" alt="Luigi_img" align="margin-left">  
+		 <a href="https://hero.fandom.com/wiki/Princess_Peach_(The_Super_Mario_Bros._Movie)" target="_blank"> Peach (Anya Taylor-Joy) </a>
+		</li> -->
+
+		<div id="Peach" class="CharCard">
+		 	<img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/3db572cf-3470-487c-951f-b856d1c38219/dfu0gez-7fd7f0c0-fa96-470a-a0d5-7bd88a526494.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzNkYjU3MmNmLTM0NzAtNDg3Yy05NTFmLWI4NTZkMWMzODIxOVwvZGZ1MGdlei03ZmQ3ZjBjMC1mYTk2LTQ3MGEtYTBkNS03YmQ4OGE1MjY0OTQucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.CNJ2uA8-K87DpAGR6CmDCCfDk2orpk619b6fLS5cccE" class="CharImg" alt="Peach_img" align="margin-left">  
+		 	<div class="Container">
+		 		<h2 style="border-style: dotted; border-radius: 5px; border-color: whitesmoke; color: deeppink; background-color:white;">Peach</h2>
+		 	</div>
+		 </div>
+
+		<!-- <li class="Enableli" class="CharContainer">
+		 <img src="https://static.wikia.nocookie.net/mario/images/c/c5/Bowser_TSMBM_%281%29.png/revision/latest?cb=20230311210652" class="CharImg2" alt="Bowser_img" align="margin-left">  
+		 <a href="https://mario.fandom.com/wiki/Bowser_(The_Super_Mario_Bros._Movie)" target="_blank"> Bowser (Jack Black) </a>
+		</li> -->
+
+		<div id="Bowser" class="CharCard">
+		 	<img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/3db572cf-3470-487c-951f-b856d1c38219/dfu0h8v-893c563b-b085-46d7-b012-6713ef49ba75.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzNkYjU3MmNmLTM0NzAtNDg3Yy05NTFmLWI4NTZkMWMzODIxOVwvZGZ1MGg4di04OTNjNTYzYi1iMDg1LTQ2ZDctYjAxMi02NzEzZWY0OWJhNzUucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.juulkCRM53k1rdSyBrRto_LkyQbnKzJfX51jmtsiyUw" class="CharImg2" alt="Peach_img" align="margin-left">  
+		 	<div class="Container">
+		 		<h2 style="border-style: dotted; border-radius: 5px; border-color: black; color: indianred; background-color:black;">Bowser</h2>
+		 	</div>
+		 </div>
+	</div> 
+	</center>
+
+	<hr>
+	<center>
+	Other Movie Recommendations:
+	</center>
+	<!-- <ol  class="centerli" style="list-style-type: none;">
+	  <li><a href="https://en.wikipedia.org/wiki/Ready_Player_One_(film)" target="_blank" style=""> Ready Player One </a></li>
+	  <li><a href="https://en.wikipedia.org/wiki/Guardians_of_the_Galaxy_(film)" target="_blank"> Guardians of the Galaxy </a></li>
+	  <li> <a href="https://en.wikipedia.org/wiki/Cars_(film)" target="_blank"> Cars </a> </li>
+	</ol> -->
+<div class="InsertBackgroundImage">
+  <form class="web_form">
+	
+	<fieldset>
+		<legend>Comments/ Suggestions</legend>
+		<textarea cols="30" rows="10"></textarea>
+	</fieldset>
+	<br>
+	<label>Choose a movie from the Dropdown:</label>
+	<b>
+	<fieldset>
+		<legend>Movie Recommendations</legend>
+		<select placeholder="Favorite Movie">
+		<option><a href="https://en.wikipedia.org/wiki/Ready_Player_One_(film)" target="_blank" style=""> Ready Player One </a></option>
+		<option><a href="https://en.wikipedia.org/wiki/Guardians_of_the_Galaxy_(film)" target="_blank"> Guardians of the Galaxy </a></option>
+		<option><a href="https://en.wikipedia.org/wiki/Cars_(film)" target="_blank"> Cars </a></option>
+	</select>
+	</fieldset>
+	<br>
+	<fieldset>
+		<legend>Got Another Recommendation?</legend>
+		<label>Input Movie Title Here:</label>
+		<input type="text">
+	</fieldset>
+	<br>
+	<b>
+	<button>Finish</button>
+	<br><br><br>
+  </form>
+</div>
+	<div class="Footer">
+		<h6 style="text-weight:bold;">Submitted by: Allen Daradal</h5>
+	</div>
+	
+</body>
+
+
